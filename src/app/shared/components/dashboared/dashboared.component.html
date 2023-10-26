@@ -1,0 +1,8 @@
+
+<div class="text-right my-3">
+    <button mat-raised-button color="primary" (click)="onStdForm()">Add Student</button>
+</div>
+<app-student-table [studentInfo]="studentArray" 
+(emitStd)="onStudentEdit($event)" 
+(emitStdDelete)="onEmitStdDelete($event)"></app-student-table>
+<!-- <app-student-form></app-student-form> -->

@@ -1,0 +1,38 @@
+
+
+<table class="table table-bordered bg-dark text-white">
+    <thead>
+        <tr>
+            <th>Sr No</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Roll No</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of studentInfo; index as i">
+            <td>{{i + 1}}</td>
+            <td>{{std.fName}}</td>
+            <td>{{std.lName}}</td>
+            <td>{{std.gender}}</td>
+            <td>{{std.email}}</td>
+            <td>{{std.contact}}</td>
+            <td>{{std.rollNo}}</td>
+            <td>
+                <button mat-fab color="primary" (click)="onEditStdInfo(std)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </td>
+            <td>
+                <button mat-fab color="warn" (click)="onDeleteStd(std.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
